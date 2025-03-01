@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> GM Connect </title>
+    <title>GM Connect</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <style>
-    :root {
-    --primary-gray: #5e6264;
-    --secondary-gray: #6c757d;
-    --light-gray: #f8f9fa;
-}
+        :root {
+            --primary-gray: #5e6264;
+            --secondary-gray: #6c757d;
+            --light-gray: #f8f9fa;
+        }
 
-        body {
-            font-family: 'Segoe UI', sans-serif;
+       html,body {
+            font-family: 'Segoe UI', sans-serif; 
+            overflow-x: hidden; 
         }
 
         .navbar {
@@ -27,35 +27,41 @@
         }
 
         .carousel-item {
-    height: 80vh;
-    background-size: cover;
-    background-position: center;
-}
+            height: 80vh;
+            background-size: cover;
+            background-position: center;
+        }
 
-.carousel-item img {
-    object-fit: cover;
-    height: 100%;
-}
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;  
 
-@media (max-width: 768px) {
-    .carousel-item {
-        height: 70vh;
-    }
-    
-    .display-3 {
-        font-size: 2.5rem;
-    }
-}
 
-@media (max-width: 576px) {
-    .carousel-item {
-        height: 60vh;
-    }
-    
-    .display-3 {
-        font-size: 2rem;
-    }
-}    .section-padding {
+
+        }  
+        
+
+        @media (max-width: 768px) {
+            .carousel-item {
+                height: 70vh;
+            }
+
+            .display-3 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .carousel-item {
+                height: 60vh;
+            }
+
+            .display-3 {
+                font-size: 2rem;
+            }
+        }
+
+        .section-padding {
             padding: 5rem 0;
         }
 
@@ -77,7 +83,7 @@
             background: white;
             border-radius: 15px;
             padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .footer {
@@ -110,50 +116,54 @@
             border-color: #1e1e1e;
             color: white;
         }
-          
-        .form-floating > .form-control, 
-.form-floating > .form-control:focus, 
-.form-floating > .form-control:not(:placeholder-shown) {
-  padding-top: 1.25rem; /* Ensures text is not cut off */
-}
 
-.form-floating > .form-control:focus ~ label, 
-.form-floating > .form-control:not(:placeholder-shown) ~ label {
-  transform: scale(0.85) translateY(-1.25rem) translateX(0.15rem); /* Adjusts floating label */
-  color: #333;
-}
+        .form-floating > .form-control,
+        .form-floating > .form-control:focus,
+        .form-floating > .form-control:not(:placeholder-shown) {
+            padding-top: 1.25rem;
+        }
 
-.form-floating > .form-control:focus,
-.form-floating > .form-control:not(:placeholder-shown) {
-  border-bottom: 1px solid #333;
-}
+        .form-floating > .form-control:focus ~ label,
+        .form-floating > .form-control:not(:placeholder-shown) ~ label {
+            transform: scale(0.85) translateY(-1.25rem) translateX(0.15rem);
+            color: #333;
+        }
 
-    </style> 
-   
-    
+        .form-floating > .form-control:focus,
+        .form-floating > .form-control:not(:placeholder-shown) {
+            border-bottom: 1px solid #333;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg px-5 fixed-top" style="background-color: #1e1e1e !important;">
-            <a class="navbar-brand text-white" href="#">
-                <img src="./WhatsApp_Image_2025-02-25_at_11.06.36_PM-removebg-preview.png" alt="GM Consultant Logo" style="height: 40px;" /> GM Connect
-              </a>
-              
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+        <a class="navbar-brand text-white" href="#">
+            <img src="./WhatsApp_Image_2025-02-25_at_11.06.36_PM-removebg-preview.png" alt="GM Consultant Logo" style="height: 40px;" /> GM Connect
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="#home" data-translate="home">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#about" data-translate="about">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#services" data-translate="services">Services</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#testimonials" data-translate="testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#contact" data-translate="contact">Contact</a></li>
+                <li class="nav-item">
+                    <button id="languageToggle" class="btn btn-outline-light d-flex align-items-center">
+                        <img src="https://flagcdn.com/de.svg" alt="German Flag" style="width: 20px; height: 15px; margin-right: 5px;" id="flagIcon">
+                        <span id="languageText">DE</span>
+                    </button>
+                </li>
+            </ul>
+        </div> 
+       
     </nav>
 
+    <!-- Carousel -->
     <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
         <!-- Indicators -->
         <div class="carousel-indicators">
@@ -161,76 +171,61 @@
             <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-    
+
         <!-- Carousel Items -->
         <div class="carousel-inner">
             <!-- Slide 1 -->
             <div class="carousel-item active position-relative">
                 <img src="./business-meeting-office.jpg" class="d-block w-100" alt="Businessman Working">
-                
-                <!-- Dark overlay for the entire image -->
-                <div class="position-absolute top-0 start-0 w-100 h-100" 
-                     style="background: rgba(0,0,0,0.4);"></div>
-                
-                <!-- Caption -->
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.4);"></div>
                 <div class="position-absolute top-50 start-0 translate-middle-y text-start px-5 w-100">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-8 col-lg-7">
-                                <h1 class="display-3 text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Ihr Partner für Personalvermittlung</h1>
-                                <p class="text-white fs-4" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">Wir verbinden Top-Talente mit führenden Unternehmen – effizient, zuverlässig und mit maßgeschneiderten Lösungen in Deutschland.</p>
-                                <a href="#contact" class="btn btn-lg btn-outline-secondary text-white mt-3 px-4 py-3 fw-bold custom-btn">Jetzt einstellen</a>
+                                <h1 class="display-3 text-white" data-translate="carouselTitle1" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Ihr Partner für Personalvermittlung</h1>
+                                <p class="text-white fs-4" data-translate="carouselText1" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">Wir verbinden Top-Talente mit führenden Unternehmen – effizient, zuverlässig und mit maßgeschneiderten Lösungen in Deutschland.</p>
+                                <a href="#contact" class="btn btn-lg btn-outline-secondary text-white mt-3 px-4 py-3 fw-bold custom-btn" data-translate="carouselButton1">Jetzt einstellen</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Slide 2 -->
             <div class="carousel-item position-relative">
                 <img src="./businesswoman-team-sitting-office.jpg" class="d-block w-100" alt="Business Tools">
-                
-                <!-- Dark overlay for the entire image -->
-                <div class="position-absolute top-0 start-0 w-100 h-100" 
-                     style="background: rgba(0,0,0,0.4);"></div>
-                
-                <!-- Caption -->
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.4);"></div>
                 <div class="position-absolute top-50 start-0 translate-middle-y text-start px-5 w-100">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-8 col-lg-7">
-                                <h1 class="display-3 text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Finde deinen Traumjob</h1> 
-                                <p class="fw-bold text-white" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">Entdecke neue Karrieremöglichkeiten mit fachkundiger Beratung und maßgeschneiderter Jobvermittlung.</p> 
-                                <a href="#contact" class="btn btn-lg btn-outline-secondary text-white mt-3 px-4 py-3 fw-bold custom-btn">Job finden</a>
+                                <h1 class="display-3 text-white" data-translate="carouselTitle2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Finde deinen Traumjob</h1>
+                                <p class="fw-bold text-white" data-translate="carouselText2" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">Entdecke neue Karrieremöglichkeiten mit fachkundiger Beratung und maßgeschneiderter Jobvermittlung.</p>
+                                <a href="#contact" class="btn btn-lg btn-outline-secondary text-white mt-3 px-4 py-3 fw-bold custom-btn" data-translate="carouselButton2">Job finden</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    
+
             <!-- Slide 3 -->
             <div class="carousel-item position-relative">
                 <img src="./low-angle-cheerful-team-students-passed-test-by-preparing-all-together.jpg" class="d-block w-100" alt="Business Executives">
-                
-                <!-- Dark overlay for the entire image -->
-                <div class="position-absolute top-0 start-0 w-100 h-100" 
-                     style="background: rgba(0,0,0,0.4);"></div>
-                
-                <!-- Caption -->
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.4);"></div>
                 <div class="position-absolute top-50 start-0 translate-middle-y text-start px-5 w-100">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-8 col-lg-7">
-                                <h1 class="display-3 text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Fachkundige Beratung für Ausbildung & Studium</h1>
-                                <p class="text-white" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">Gestalte deine akademische Laufbahn mit vertrauenswürdiger Expertise – von der Berufsberatung bis zur erfolgreichen Einschreibung.</p>
-                                <a href="#contact" class="btn btn-lg btn-outline-secondary text-white mt-3 px-4 py-3 fw-bold custom-btn">Studieren</a>
+                                <h1 class="display-3 text-white" data-translate="carouselTitle3" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Fachkundige Beratung für Ausbildung & Studium</h1>
+                                <p class="text-white" data-translate="carouselText3" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">Gestalte deine akademische Laufbahn mit vertrauenswürdiger Expertise – von der Berufsberatung bis zur erfolgreichen Einschreibung.</p>
+                                <a href="#contact" class="btn btn-lg btn-outline-secondary text-white mt-3 px-4 py-3 fw-bold custom-btn" data-translate="carouselButton3">Studieren</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <!-- Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -243,317 +238,465 @@
     </div>
 
     <!-- About Section -->
-    <section id="services" class="py-5">  
+    <section id="services" class="py-5">
         <div class="container">
-            <!-- Abschnittstitel -->
-            <h2 class="display-3 text-center mb-5" data-aos="fade-up">Unsere Dienstleistungen</h2>
-    
+            <h2 class="display-3 text-center mb-5" data-translate="servicesTitle" data-aos="fade-up">Unsere Dienstleistungen</h2>
             <div class="row g-4">
                 <!-- Jobvermittlung -->
                 <div class="col-md-4">
                     <div class="service-card card h-100 p-4 text-center shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                        <img src="./creative-people-working-office.jpg" 
-                             class="card-img-top rounded-3 mb-3" alt="Jobvermittlung">
-                        <h3 class="h4 fw-bold">Jobvermittlung</h3>
-                        <p class="text-muted">Wir bringen Unternehmen mit qualifizierten und motivierten Mitarbeitern zusammen.</p>
+                        <img src="./creative-people-working-office.jpg" class="card-img-top rounded-3 mb-3" alt="Jobvermittlung">
+                        <h3 class="h4 fw-bold" data-translate="service1Title">Jobvermittlung</h3>
+                        <p class="text-muted" data-translate="service1Text">Wir bringen Unternehmen mit qualifizierten und motivierten Mitarbeitern zusammen.</p>
                     </div>
                 </div>
-    
+
                 <!-- Unterstützung für Arbeitssuchende -->
                 <div class="col-md-4">
                     <div class="service-card card h-100 p-4 text-center shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                        <img src="./close-up-smiley-woman-working.jpg" 
-                             class="card-img-top rounded-3 mb-3" alt="Arbeitssuchende">
-                        <h3 class="h4 fw-bold">Unterstützung für Arbeitssuchende</h3>
-                        <p class="text-muted">Wir helfen Kandidaten, einen Job und die erforderlichen Dokumente zu erhalten..</p>
+                        <img src="./close-up-smiley-woman-working.jpg" class="card-img-top rounded-3 mb-3" alt="Arbeitssuchende">
+                        <h3 class="h4 fw-bold" data-translate="service2Title">Unterstützung für Arbeitssuchende</h3>
+                        <p class="text-muted" data-translate="service2Text">Wir helfen Kandidaten, einen Job und die erforderlichen Dokumente zu erhalten.</p>
                     </div>
                 </div>
-    
+
                 <!-- Ausbildung Unterstützung -->
                 <div class="col-md-4">
                     <div class="service-card card h-100 p-4 text-center shadow-lg" data-aos="fade-up" data-aos-delay="300">
-                        <img src="./medium-shot-graduate-student.jpg" 
-                             class="card-img-top rounded-3 mb-3" alt="Ausbildung Unterstützung">
-                        <h3 class="h4 fw-bold">Unterstützung bei der Ausbildung</h3>
-                        <p class="text-muted">Wir bieten Beratung zu Ausbildungsplätzen, Unterkunft und bürokratischer Unterstützung.</p>
+                        <img src="./medium-shot-graduate-student.jpg" class="card-img-top rounded-3 mb-3" alt="Ausbildung Unterstützung">
+                        <h3 class="h4 fw-bold" data-translate="service3Title">Unterstützung bei der Ausbildung</h3>
+                        <p class="text-muted" data-translate="service3Text">Wir bieten Beratung zu Ausbildungsplätzen, Unterkunft und bürokratischer Unterstützung.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    
 
-<!-- Statistik-Bereich -->
-<section class="py-5 text-white" style="background-color: #1e1e1e;">
-    <div class="container">
-        <div class="row text-center g-4">
-            <!-- Erfolgreiche Vermittlungen -->
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="display-4 fw-bold mb-2">500+</div>
-                <div class="">Erfolgreiche Vermittlungen</div>
-            </div>
-
-            <!-- Kundenzufriedenheit -->
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="display-4 fw-bold mb-2">98%</div>
-                <div class="">Kundenzufriedenheit</div>
-            </div>
-
-            <!-- Partnerunternehmen -->
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="display-4 fw-bold mb-2">200+</div>
-                <div class="">Partnerunternehmen</div>
-            </div>
-
-            <!-- Jahre Erfahrung -->
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
-                <div class="display-4 fw-bold mb-2">15+</div>
-                <div class="">Jahre Erfahrung</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<!-- Prozess-Bereich -->
-<section class="py-5">
-    <div class="container">
-        <div class="text-center mb-5" data-aos="fade-up">
-            <h2 class="display-5 fw-bold mb-3">Unser Arbeitsprozess</h2>
-            <p class="text-muted mx-auto" style="max-width: 600px;">
-                Unser bewährter Prozess sorgt für erfolgreiche Ergebnisse für Kandidaten und Unternehmen.
-            </p>
-        </div>
-        <div class="row text-center g-4">
-            <!-- Schritt 1 -->
-            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="d-flex flex-column align-items-center">
-                    <div class="rounded-circle  text-white d-flex align-items-center justify-content-center fs-3 fw-bold mb-3" style="width: 80px; height: 80px; background-color: #1e1e1e;">1</div>
-                    <h3 class="h5 fw-bold">Erstberatung</h3>
-                    <p class="text-muted">Verstehen Ihrer spezifischen Bedürfnisse und Anforderungen</p>
+    <!-- Statistics Section -->
+    <section class="py-5 text-white" style="background-color: #1e1e1e;">
+        <div class="container">
+            <div class="row text-center g-4">
+                <!-- Erfolgreiche Vermittlungen -->
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="display-4 fw-bold mb-2">500+</div>
+                    <div class="" data-translate="stat1">Erfolgreiche Vermittlungen</div>
                 </div>
-            </div>
-            <!-- Schritt 2 -->
-            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="d-flex flex-column align-items-center">
-                    <div class="rounded-circle  text-white d-flex align-items-center justify-content-center fs-3 fw-bold mb-3" style="width: 80px; height: 80px; background-color: #1e1e1e;">2</div>
-                    <h3 class="h5 fw-bold">Strategieentwicklung</h3>
-                    <p class="text-muted">Erstellung eines maßgeschneiderten Ansatzes für Ihren Erfolg</p>
+
+                <!-- Kundenzufriedenheit -->
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="display-4 fw-bold mb-2">98%</div>
+                    <div class="" data-translate="stat2">Kundenzufriedenheit</div>
                 </div>
-            </div>
-            <!-- Schritt 3 -->
-            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="d-flex flex-column align-items-center">
-                    <div class="rounded-circle  text-white d-flex align-items-center justify-content-center fs-3 fw-bold mb-3" style="width: 80px; height: 80px; background-color: #1e1e1e;">3</div>
-                    <h3 class="h5 fw-bold">Umsetzung</h3>
-                    <p class="text-muted">Präzise und sorgfältige Durchführung des Plans</p>
+
+                <!-- Partnerunternehmen -->
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="display-4 fw-bold mb-2">200+</div>
+                    <div class="" data-translate="stat3">Partnerunternehmen</div>
                 </div>
-            </div>
-            <!-- Schritt 4 -->
-            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-                <div class="d-flex flex-column align-items-center">
-                    <div class="rounded-circle  text-white d-flex align-items-center justify-content-center fs-3 fw-bold mb-3" style="width: 80px; height: 80px; background-color: #1e1e1e;">4</div>
-                    <h3 class="h5 fw-bold">Laufende Unterstützung</h3>
-                    <p class="text-muted">Kontinuierliche Hilfe und Optimierung</p>
+
+                <!-- Jahre Erfahrung -->
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="display-4 fw-bold mb-2">15+</div>
+                    <div class="" data-translate="stat4">Jahre Erfahrung</div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="text-center mb-5" data-aos="fade-up">
-            <h2 class="fw-bold">Was unsere Kunden sagen</h2>
-            <p class="text-muted">Lesen Sie über die Erfahrungen von Unternehmen und Einzelpersonen, denen wir geholfen haben.</p>
-        </div>
-        <div class="row g-4">
-            <!-- Testimonial 1 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card p-4 shadow-lg border-0">
-                    <div class="d-flex align-items-center mb-3">
-                        <img src="https://media.gettyimages.com/id/1319771651/photo/portrait-of-man-smiling-at-camera.jpg?s=612x612&w=0&k=20&c=kY7Uml6KUH1xoIpXMikTpd3J7-vRsDzN9B-V6Vcs8bU=" 
-                             alt="Kunde" class="rounded-circle me-3" width="50">
-                        <div>
-                            <h5 class="fw-bold mb-0">Michael Schmidt</h5>
-                            <p class="text-muted small">Personalleiter, Tech GmbH</p>
-                        </div>
-                    </div>
-                    <p class="text-secondary">"GM Consultant war maßgeblich daran beteiligt, unser Tech-Team aufzubauen. Ihr Verständnis für den Markt ist herausragend."</p>
-                </div>
-            </div>
-            <!-- Testimonial 2 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card p-4 shadow-lg border-0">
-                    <div class="d-flex align-items-center mb-3">
-                        <img src="https://www.profilebakery.com/wp-content/uploads/2024/12/business-portrait-professional-headshot-1734993616.jpg" 
-                             alt="Kunde" class="rounded-circle me-3" width="50">
-                        <div>
-                            <h5 class="fw-bold mb-0">Laura Meyer</h5>
-                            <p class="text-muted small">Programm-Absolventin</p>
-                        </div>
-                    </div>
-                    <p class="text-secondary">"Das Schulungsprogramm hat meine Erwartungen übertroffen. Ich habe wertvolle Fähigkeiten erworben, die meine Karriere vorangebracht haben."</p>
-                </div>
-            </div>
-            <!-- Testimonial 3 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card p-4 shadow-lg border-0">
-                    <div class="d-flex align-items-center mb-3">
-                        <img src="https://t3.ftcdn.net/jpg/10/72/68/08/360_F_1072680885_utKSwsK1Sb1tjiljmAnM7cMAuM6Tg8El.jpg" 
-                             alt="Kunde" class="rounded-circle me-3" width="50">
-                        <div>
-                            <h5 class="fw-bold mb-0">Thomas Weber</h5>
-                            <p class="text-muted small">CEO, Innovation AG</p>
-                        </div>
-                    </div>
-                    <p class="text-secondary">"Die Zusammenarbeit mit GM Consultant hat unseren Rekrutierungsprozess grundlegend verändert. Sie verstehen unsere Bedürfnisse wirklich."</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="py-5">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-md-6" data-aos="fade-right">
-                <h2 class="fw-bold">Kontakt aufnehmen</h2>
-                <p class="mb-4">
-                    Bereit, Ihre Karriere zu verändern oder die perfekten Talente zu finden? Kontaktieren Sie uns noch heute.
-                </p>
-                <ul class="list-unstyled">
-                    <li class="d-flex align-items-center mb-3">
-                        <i class="bi bi-telephone-fill me-3 fs-4 text-warning"></i>
-                        <div>
-                            <strong>Telefon</strong>
-                            <p class="mb-0">01522 4277600</p>
-                        </div>
-                    </li>
-                    <li class="d-flex align-items-center mb-3">
-                        <i class="bi bi-envelope-fill me-3 fs-4 text-warning"></i>
-                        <div>
-                            <strong>E-Mail</strong>
-                            <p class="mb-0">info@gm-connect.de</p>
-                        </div>
-                    </li>
-                    <li class="d-flex align-items-center mb-3">
-                        <i class="bi bi-geo-alt-fill me-3 fs-4 text-warning"></i>
-                        <div>
-                            <strong>Standort</strong>
-                            <p class="mb-0">Ettishoferstraße 7, 88250 Weingarten, Deutschland</p>
-                        </div>
-                    </li>
-                    
-                </ul>
-                
-            </div>
-            <div class="col-md-6" data-aos="fade-left">
-                <div class="card border-0 position-relative" style="width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <div class="card-body p-4 p-md-5">
-                      <h6 class="mb-4" style="letter-spacing: 1px; font-weight: 500; color: #333; font-size: 14px;">CONTACT FORM</h6>
-                      
-                      <form>
-                        <div class="form-floating mb-4">
-                          <input type="text" id="name" class="form-control border-0 border-bottom rounded-0 shadow-none px-0 py-3" 
-                                 style="box-shadow: none !important; border-radius: 0; border-bottom: 1px solid #dee2e6; background-color: transparent;" 
-                                 placeholder=" " required>
-                          <label for="name" style="padding-left: 0; padding-top: 0.5rem; font-weight: 500;">Name</label>
-                        </div>
-                        
-                        <div class="form-floating mb-4">
-                          <input type="email" id="email" class="form-control border-0 border-bottom rounded-0 shadow-none px-0 py-3" 
-                                 style="box-shadow: none !important; border-radius: 0; border-bottom: 1px solid #dee2e6; background-color: transparent;" 
-                                 placeholder=" " required>
-                          <label for="email" style="padding-left: 0; padding-top: 0.5rem; font-weight: 500;">E-mail</label>
-                        </div>
-                        
-                        <div class="form-floating mb-4">
-                          <input type="tel" id="phone" class="form-control border-0 border-bottom rounded-0 shadow-none px-0 py-3" 
-                                 style="box-shadow: none !important; border-radius: 0; border-bottom: 1px solid #dee2e6; background-color: transparent;"
-                                 placeholder=" ">
-                          <label for="phone" style="padding-left: 0; padding-top: 0.5rem; font-weight: 500;">Phone</label>
-                        </div>
-                        
-                        <div class="form-floating mb-4">
-                            <textarea id="message" class="form-control border-0 border-bottom rounded-0 shadow-none px-0 py-3" 
-                                      style="box-shadow: none !important; border-radius: 0; border-bottom: 1px solid #dee2e6; background-color: transparent; height: 100px;" 
-                                      placeholder=" " required></textarea>
-                            <label for="message" style="padding-left: 0; padding-top: 0.5rem; font-weight: 500;">Message</label>
-                        </div>
-                        
-                        
-                        <div class="d-flex justify-content-end align-items-center mt-5">
-                          <button type="submit" class="btn px-4 py-2 text-white" style="border-radius: 5px; font-size: 14px; font-weight: 500; letter-spacing: 0.5px; background-color: #1e1e1e;">
-                            SEND MESSAGE <span style="margin-left: 5px;">—</span>
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-            </div>
-        </div>
-    </div>
-  </section>
-
-
-<footer class="py-5" style="background-color: #1e1e1e; color: white;">
-    <div class="container px-4">
-        <div class="row g-4">
-            <div class="col-md-3">
-                <img src="./WhatsApp_Image_2025-02-25_at_11.06.36_PM-removebg-preview.png" alt="GM Consultant Logo" class="img-fluid mb-2" style="height: 50px;">
-                <p class="text-light">
-                    Your trusted partner for education and recruitment solutions in Germany.
+    <!-- Process Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3" data-translate="processTitle">Unser Arbeitsprozess</h2>
+                <p class="text-muted mx-auto" data-translate="processText" style="max-width: 600px;">
+                    Unser bewährter Prozess sorgt für erfolgreiche Ergebnisse für Kandidaten und Unternehmen.
                 </p>
             </div>
-            <div class="col-md-3">
-                <h5 class="fw-bold mb-3 text-white">Services</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-decoration-none text-light">Ausbildung Guidance</a></li>
-                    <li><a href="#" class="text-decoration-none text-light">University Admissions</a></li>
-                    <li><a href="#" class="text-decoration-none text-light">Recruitment Solutions</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h5 class="fw-bold mb-3 text-white">Company</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-decoration-none text-light">About Us</a></li>
-                    <li><a href="#" class="text-decoration-none text-light">Careers</a></li>
-                    <li><a href="#" class="text-decoration-none text-light">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h5 class="fw-bold mb-3 text-white">Legal</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-decoration-none text-light">Privacy Policy</a></li>
-                    <li><a href="#" class="text-decoration-none text-light">Terms of Service</a></li>
-                    <li><a href="#" class="text-decoration-none text-light">Impressum</a></li>
-                </ul>
+            <div class="row text-center g-4">
+                <!-- Schritt 1 -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="rounded-circle text-white d-flex align-items-center justify-content-center fs-3 fw-bold mb-3" style="width: 80px; height: 80px; background-color: #1e1e1e;">1</div>
+                        <h3 class="h5 fw-bold" data-translate="step1Title">Erstberatung</h3>
+                        <p class="text-muted" data-translate="step1Text">Verstehen Ihrer spezifischen Bedürfnisse und Anforderungen</p>
+                    </div>
+                </div>
+                <!-- Schritt 2 -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="rounded-circle text-white d-flex align-items-center justify-content-center fs-3 fw-bold mb-3" style="width: 80px; height: 80px; background-color: #1e1e1e;">2</div>
+                        <h3 class="h5 fw-bold" data-translate="step2Title">Strategieentwicklung</h3>
+                        <p class="text-muted" data-translate="step2Text">Erstellung eines maßgeschneiderten Ansatzes für Ihren Erfolg</p>
+                    </div>
+                </div>
+                <!-- Schritt 3 -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="rounded-circle text-white d-flex align-items-center justify-content-center fs-3 fw-bold mb-3" style="width: 80px; height: 80px; background-color: #1e1e1e;">3</div>
+                        <h3 class="h5 fw-bold" data-translate="step3Title">Umsetzung</h3>
+                        <p class="text-muted" data-translate="step3Text">Präzise und sorgfältige Durchführung des Plans</p>
+                    </div>
+                </div>
+                <!-- Schritt 4 -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="rounded-circle text-white d-flex align-items-center justify-content-center fs-3 fw-bold mb-3" style="width: 80px; height: 80px; background-color: #1e1e1e;">4</div>
+                        <h3 class="h5 fw-bold" data-translate="step4Title">Laufende Unterstützung</h3>
+                        <p class="text-muted" data-translate="step4Text">Kontinuierliche Hilfe und Optimierung</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="border-top border-light mt-4 pt-3 text-center text-light">
-            <p>&copy; 2025  GM Connect. All rights reserved.</p>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold" data-translate="testimonialsTitle">Was unsere Kunden sagen</h2>
+                <p class="text-muted" data-translate="testimonialsText">Lesen Sie über die Erfahrungen von Unternehmen und Einzelpersonen, denen wir geholfen haben.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card p-4 shadow-lg border-0">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://media.gettyimages.com/id/1319771651/photo/portrait-of-man-smiling-at-camera.jpg?s=612x612&w=0&k=20&c=kY7Uml6KUH1xoIpXMikTpd3J7-vRsDzN9B-V6Vcs8bU=" alt="Kunde" class="rounded-circle me-3" width="50">
+                            <div>
+                                <h5 class="fw-bold mb-0">Michael Schmidt</h5>
+                                <p class="text-muted small">Personalleiter, Tech GmbH</p>
+                            </div>
+                        </div>
+                        <p class="text-secondary" data-translate="testimonial1Text">"GM Consultant war maßgeblich daran beteiligt, unser Tech-Team aufzubauen. Ihr Verständnis für den Markt ist herausragend."</p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card p-4 shadow-lg border-0">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://www.profilebakery.com/wp-content/uploads/2024/12/business-portrait-professional-headshot-1734993616.jpg" alt="Kunde" class="rounded-circle me-3" width="50">
+                            <div>
+                                <h5 class="fw-bold mb-0">Laura Meyer</h5>
+                                <p class="text-muted small">Programm-Absolventin</p>
+                            </div>
+                        </div>
+                        <p class="text-secondary" data-translate="testimonial2Text">"Das Schulungsprogramm hat meine Erwartungen übertroffen. Ich habe wertvolle Fähigkeiten erworben, die meine Karriere vorangebracht haben."</p>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card p-4 shadow-lg border-0">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://t3.ftcdn.net/jpg/10/72/68/08/360_F_1072680885_utKSwsK1Sb1tjiljmAnM7cMAuM6Tg8El.jpg" alt="Kunde" class="rounded-circle me-3" width="50">
+                            <div>
+                                <h5 class="fw-bold mb-0">Thomas Weber</h5>
+                                <p class="text-muted small">CEO, Innovation AG</p>
+                            </div>
+                        </div>
+                        <p class="text-secondary" data-translate="testimonial3Text">"Die Zusammenarbeit mit GM Consultant hat unseren Rekrutierungsprozess grundlegend verändert. Sie verstehen unsere Bedürfnisse wirklich."</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6" data-aos="fade-right">
+                    <h2 class="fw-bold" data-translate="contactTitle">Kontakt aufnehmen</h2>
+                    <p class="mb-4" data-translate="contactText">
+                        Bereit, Ihre Karriere zu verändern oder die perfekten Talente zu finden? Kontaktieren Sie uns noch heute.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="bi bi-telephone-fill me-3 fs-4 text-warning"></i>
+                            <div>
+                                <strong data-translate="contactPhoneLabel">Telefon</strong>
+                                <p class="mb-0">01522 4277600</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="bi bi-envelope-fill me-3 fs-4 text-warning"></i>
+                            <div>
+                                <strong data-translate="contactEmailLabel">E-Mail</strong>
+                                <p class="mb-0">info@gm-connect.de</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="bi bi-geo-alt-fill me-3 fs-4 text-warning"></i>
+                            <div>
+                                <strong data-translate="contactAddressLabel">Standort</strong>
+                                <p class="mb-0">Ettishoferstraße 7, 88250 Weingarten, Deutschland</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="card border-0 position-relative" style="width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                        <div class="card-body p-4 p-md-5">
+                            <h6 class="mb-4" style="letter-spacing: 1px; font-weight: 500; color: #333; font-size: 14px;" data-translate="contactFormTitle">CONTACT FORM</h6>
+                            <form>
+                                <div class="form-floating mb-4">
+                                    <input type="text" id="name" class="form-control border-0 border-bottom rounded-0 shadow-none px-0 py-3" style="box-shadow: none !important; border-radius: 0; border-bottom: 1px solid #dee2e6; background-color: transparent;" placeholder=" " required>
+                                    <label for="name" style="padding-left: 0; padding-top: 0.5rem; font-weight: 500;" data-translate="contactFormName">Name</label>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <input type="email" id="email" class="form-control border-0 border-bottom rounded-0 shadow-none px-0 py-3" style="box-shadow: none !important; border-radius: 0; border-bottom: 1px solid #dee2e6; background-color: transparent;" placeholder=" " required>
+                                    <label for="email" style="padding-left: 0; padding-top: 0.5rem; font-weight: 500;" data-translate="contactFormEmail">E-mail</label>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <input type="tel" id="phone" class="form-control border-0 border-bottom rounded-0 shadow-none px-0 py-3" style="box-shadow: none !important; border-radius: 0; border-bottom: 1px solid #dee2e6; background-color: transparent;" placeholder=" ">
+                                    <label for="phone" style="padding-left: 0; padding-top: 0.5rem; font-weight: 500;" data-translate="contactFormPhone">Phone</label>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <textarea id="message" class="form-control border-0 border-bottom rounded-0 shadow-none px-0 py-3" style="box-shadow: none !important; border-radius: 0; border-bottom: 1px solid #dee2e6; background-color: transparent; height: 100px;" placeholder=" " required></textarea>
+                                    <label for="message" style="padding-left: 0; padding-top: 0.5rem; font-weight: 500;" data-translate="contactFormMessage">Message</label>
+                                </div>
+                                <div class="d-flex justify-content-end align-items-center mt-5">
+                                    <button type="submit" class="btn px-4 py-2 text-white" style="border-radius: 5px; font-size: 14px; font-weight: 500; letter-spacing: 0.5px; background-color: #1e1e1e;" data-translate="contactFormButton">SEND MESSAGE <span style="margin-left: 5px;">—</span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-   document.addEventListener('DOMContentLoaded', function() {
-    AOS.init({
-        duration: 1000,
-        once: true
-    });
-});
-</script>
-
-
+    <!-- Footer -->
+    <footer class="py-5" style="background-color: #1e1e1e; color: white;">
+        <div class="container px-4">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <img src="./WhatsApp_Image_2025-02-25_at_11.06.36_PM-removebg-preview.png" alt="GM Consultant Logo" class="img-fluid mb-2" style="height: 50px;">
+                    <p class="text-light" data-translate="footerText">
+                        Ihr vertrauenswürdiger Partner für Bildungs- und Rekrutierungslösungen in Deutschland.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3 text-white" data-translate="footerServicesTitle">Dienstleistungen</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-light" data-translate="footerService1">Ausbildung Beratung</a></li>
+                        <li><a href="#" class="text-decoration-none text-light" data-translate="footerService2">Ausbildung Training</a></li>
+                        <li><a href="#" class="text-decoration-none text-light" data-translate="footerService3">Rekrutierungslösungen</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3 text-white" data-translate="footerCompanyTitle">Unternehmen</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-light" data-translate="footerCompany1">Über uns</a></li>
+                        <li><a href="#" class="text-decoration-none text-light" data-translate="footerCompany2">Karriere</a></li>
+                        <li><a href="#" class="text-decoration-none text-light" data-translate="footerCompany3">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3 text-white" data-translate="footerLegalTitle">Rechtliches</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-light" data-translate="footerLegal1">Datenschutzrichtlinie</a></li>
+                        <li><a href="#" class="text-decoration-none text-light" data-translate="footerLegal2">Nutzungsbedingungen</a></li>
+                        <li><a href="#" class="text-decoration-none text-light" data-translate="footerLegal3">Impressum</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top border-light mt-4 pt-3 text-center text-light">
+                <p>&copy; 2025 GM Connect. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-   
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+
+    const languageData = {
+        'de': {
+            'home': 'Home',
+            'about': 'Über uns',
+            'services': 'Dienstleistungen',
+            'testimonials': 'Testimonials',
+            'contact': 'Kontakt',
+            'carouselTitle1': 'Ihr Partner für Personalvermittlung',
+            'carouselText1': 'Wir verbinden Top-Talente mit führenden Unternehmen – effizient, zuverlässig und mit maßgeschneiderten Lösungen in Deutschland.',
+            'carouselButton1': 'Jetzt einstellen',
+            'carouselTitle2': 'Finde deinen Traumjob',
+            'carouselText2': 'Entdecke neue Karrieremöglichkeiten mit fachkundiger Beratung und maßgeschneiderter Jobvermittlung.',
+            'carouselButton2': 'Job finden',
+            'carouselTitle3': 'Fachkundige Beratung für Ausbildung & Studium',
+            'carouselText3': 'Gestalte deine akademische Laufbahn mit vertrauenswürdiger Expertise – von der Berufsberatung bis zur erfolgreichen Einschreibung.',
+            'carouselButton3': 'Studieren',
+            'servicesTitle': 'Unsere Dienstleistungen',
+            'service1Title': 'Jobvermittlung',
+            'service1Text': 'Wir bringen Unternehmen mit qualifizierten und motivierten Mitarbeitern zusammen.',
+            'service2Title': 'Unterstützung für Arbeitssuchende',
+            'service2Text': 'Wir helfen Kandidaten, einen Job und die erforderlichen Dokumente zu erhalten.',
+            'service3Title': 'Unterstützung bei der Ausbildung',
+            'service3Text': 'Wir bieten Beratung zu Ausbildungsplätzen, Unterkunft und bürokratischer Unterstützung.',
+            'stat1': 'Erfolgreiche Vermittlungen',
+            'stat2': 'Kundenzufriedenheit',
+            'stat3': 'Partnerunternehmen',
+            'stat4': 'Jahre Erfahrung',
+            'processTitle': 'Unser Arbeitsprozess',
+            'processText': 'Unser bewährter Prozess sorgt für erfolgreiche Ergebnisse für Kandidaten und Unternehmen.',
+            'step1Title': 'Erstberatung',
+            'step1Text': 'Verstehen Ihrer spezifischen Bedürfnisse und Anforderungen',
+            'step2Title': 'Strategieentwicklung',
+            'step2Text': 'Erstellung eines maßgeschneiderten Ansatzes für Ihren Erfolg',
+            'step3Title': 'Umsetzung',
+            'step3Text': 'Präzise und sorgfältige Durchführung des Plans',
+            'step4Title': 'Laufende Unterstützung',
+            'step4Text': 'Kontinuierliche Hilfe und Optimierung',
+            'testimonialsTitle': 'Was unsere Kunden sagen',
+            'testimonialsText': 'Lesen Sie über die Erfahrungen von Unternehmen und Einzelpersonen, denen wir geholfen haben.',
+            'testimonial1Text': '"GM Consultant war maßgeblich daran beteiligt, unser Tech-Team aufzubauen. Ihr Verständnis für den Markt ist herausragend."',
+            'testimonial2Text': '"Das Schulungsprogramm hat meine Erwartungen übertroffen. Ich habe wertvolle Fähigkeiten erworben, die meine Karriere vorangebracht haben."',
+            'testimonial3Text': '"Die Zusammenarbeit mit GM Consultant hat unseren Rekrutierungsprozess grundlegend verändert. Sie verstehen unsere Bedürfnisse wirklich."',
+            'contactTitle': 'Kontakt aufnehmen',
+            'contactText': 'Bereit, Ihre Karriere zu verändern oder die perfekten Talente zu finden? Kontaktieren Sie uns noch heute.',
+            'contactPhoneLabel': 'Telefon',
+            'contactEmailLabel': 'E-Mail',
+            'contactAddressLabel': 'Standort',
+            'contactFormTitle': 'Kontaktformular',
+            'contactFormName': 'Name',
+            'contactFormEmail': 'E-Mail',
+            'contactFormPhone': 'Telefon',
+            'contactFormMessage': 'Nachricht',
+            'contactFormButton': 'Nachricht senden',
+            'footerText': 'Ihr vertrauenswürdiger Partner für Bildungs- und Rekrutierungslösungen in Deutschland.',
+            'footerServicesTitle': 'Dienstleistungen',
+            'footerService1': 'Ausbildung Beratung',
+            'footerService2': 'Ausbildung Training',
+            'footerService3': 'Rekrutierungslösungen',
+            'footerCompanyTitle': 'Unternehmen',
+            'footerCompany1': 'Über uns',
+            'footerCompany2': 'Karriere',
+            'footerCompany3': 'Kontakt',
+            'footerLegalTitle': 'Rechtliches',
+            'footerLegal1': 'Datenschutzrichtlinie',
+            'footerLegal2': 'Nutzungsbedingungen',
+            'footerLegal3': 'Impressum'
+        },
+        'en': {
+            'home': 'Home',
+            'about': 'About',
+            'services': 'Services',
+            'testimonials': 'Testimonials',
+            'contact': 'Contact',
+            'carouselTitle1': 'Your Partner for Staffing Solutions',
+            'carouselText1': 'We connect top talents with leading companies – efficiently, reliably, and with tailored solutions in Germany.',
+            'carouselButton1': 'Hire Now',
+            'carouselTitle2': 'Find Your Dream Job',
+            'carouselText2': 'Discover new career opportunities with expert advice and customized job placement.',
+            'carouselButton2': 'Find Job',
+            'carouselTitle3': 'Expert Advice for Education & Study',
+            'carouselText3': 'Shape your academic career with trusted expertise – from career counseling to successful enrollment.',
+            'carouselButton3': 'Study',
+            'servicesTitle': 'Our Services',
+            'service1Title': 'Job Placement',
+            'service1Text': 'We connect companies with qualified and motivated employees.',
+            'service2Title': 'Support for Job Seekers',
+            'service2Text': 'We help candidates find a job and obtain the necessary documents.',
+            'service3Title': 'Training Support',
+            'service3Text': 'We provide advice on training positions, accommodation, and bureaucratic support.',
+            'stat1': 'Successful Placements',
+            'stat2': 'Customer Satisfaction',
+            'stat3': 'Partner Companies',
+            'stat4': 'Years of Experience',
+            'processTitle': 'Our Work Process',
+            'processText': 'Our proven process ensures successful outcomes for candidates and companies.',
+            'step1Title': 'Initial Consultation',
+            'step1Text': 'Understanding your specific needs and requirements',
+            'step2Title': 'Strategy Development',
+            'step2Text': 'Creating a tailored approach for your success',
+            'step3Title': 'Implementation',
+            'step3Text': 'Precise and careful execution of the plan',
+            'step4Title': 'Ongoing Support',
+            'step4Text': 'Continuous assistance and optimization',
+            'testimonialsTitle': 'What Our Clients Say',
+            'testimonialsText': 'Read about the experiences of companies and individuals we have helped.',
+            'testimonial1Text': '"GM Consultant played a key role in building our tech team. Their understanding of the market is outstanding."',
+            'testimonial2Text': '"The training program exceeded my expectations. I gained valuable skills that advanced my career."',
+            'testimonial3Text': '"Working with GM Consultant has fundamentally changed our recruitment process. They truly understand our needs."',
+            'contactTitle': 'Get in Touch',
+            'contactText': 'Ready to transform your career or find the perfect talent? Contact us today.',
+            'contactPhoneLabel': 'Phone',
+            'contactEmailLabel': 'Email',
+            'contactAddressLabel': 'Location',
+            'contactFormTitle': 'Contact Form',
+            'contactFormName': 'Name',
+            'contactFormEmail': 'Email',
+            'contactFormPhone': 'Phone',
+            'contactFormMessage': 'Message',
+            'contactFormButton': 'Send Message',
+            'footerText': 'Your trusted partner for education and recruitment solutions in Germany.',
+            'footerServicesTitle': 'Services',
+            'footerService1': 'Training Consultation',
+            'footerService2': 'Training Programs',
+            'footerService3': 'Recruitment Solutions',
+            'footerCompanyTitle': 'Company',
+            'footerCompany1': 'About Us',
+            'footerCompany2': 'Careers',
+            'footerCompany3': 'Contact',
+            'footerLegalTitle': 'Legal',
+            'footerLegal1': 'Privacy Policy',
+            'footerLegal2': 'Terms of Use',
+            'footerLegal3': 'Imprint'
+        }
+    };
+
+    let currentLanguage = 'de';
+
+    // Get references to the flag and text elements
+    const flagIcon = document.getElementById('flagIcon');
+    const languageText = document.getElementById('languageText');
+
+    function toggleLanguage() {
+        // Toggle the language
+        currentLanguage = currentLanguage === 'de' ? 'en' : 'de';
+        updateLanguage();
+
+        // Update the flag and text
+        if (currentLanguage === 'de') {
+            flagIcon.src = 'https://flagcdn.com/de.svg'; // German flag
+            languageText.textContent = 'DE';
+        } else {
+            flagIcon.src = 'https://flagcdn.com/gb.svg'; // British flag
+            languageText.textContent = 'EN';
+        }
+    }
+
+    function updateLanguage() {
+        // Update all elements with data-translate attribute
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.getAttribute('data-translate');
+            element.textContent = languageData[currentLanguage][key];
+        });
+    }
+
+    // Add event listener to the language toggle button
+    document.getElementById('languageToggle').addEventListener('click', toggleLanguage);
+
+    // Initialize the flag and text on page load
+    if (currentLanguage === 'de') {
+        flagIcon.src = 'https://flagcdn.com/de.svg'; // German flag
+        languageText.textContent = 'DE';
+    } else {
+        flagIcon.src = 'https://flagcdn.com/gb.svg'; // British flag
+        languageText.textContent = 'EN';
+    }
+
+    // Initial language update
+    updateLanguage();
+});
+
+        
+    </script>
 </body>
 </html>
