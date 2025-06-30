@@ -1,0 +1,5 @@
+# /robots.txt file at gmconnect.de/robots.txt
+
+User-agent: *
+Allow: /
+Sitemap: https://gmconnect.de/sitemap.xml
