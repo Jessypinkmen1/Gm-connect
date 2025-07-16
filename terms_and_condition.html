@@ -1,0 +1,483 @@
+
+
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GM Connect</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" /> 
+     <link rel="icon" type="image/png" href="images/gm-connect-logo.png" />
+
+    <style>
+        :root {
+            --primary-gray: #5e6264;
+            --secondary-gray: #6c757d;
+            --light-gray: #f8f9fa;
+        }
+
+
+
+        html, body {
+    font-family: "Segoe UI", sans-serif;
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+
+
+
+        .navbar {
+            background-color: var(--primary-gray) !important;
+            padding: 1rem 0;
+        }
+
+        .carousel-item {
+            height: 80vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        .bg-gray {
+            background-color: var(--light-gray);
+        }
+          
+
+      
+        .footer {
+            background-color: var(--primary-gray);
+            color: white;
+            padding: 3rem 0; 
+            bottom: 0;
+        }
+
+        .btn-custom {
+            background-color: #1e1e1e !important;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #1e1e1e !important;
+            border-color: #1e1e1e;
+            color: white;
+        }
+
+        .form-floating>.form-control,
+        .form-floating>.form-control:focus,
+        .form-floating>.form-control:not(:placeholder-shown) {
+            padding-top: 1.25rem;
+        }
+
+        .form-floating>.form-control:focus~label,
+        .form-floating>.form-control:not(:placeholder-shown)~label {
+            transform: scale(0.85) translateY(-1.25rem) translateX(0.15rem);
+            color: #333;
+        }
+
+        .form-floating>.form-control:focus,
+        .form-floating>.form-control:not(:placeholder-shown) {
+            border-bottom: 1px solid #333;
+        }
+
+        .cookie-banner {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            /* Make sure banner appears above other content */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cookie-banner"
+        class="cookie-banner bg-dark text-light p-3 fixed-bottom d-flex justify-content-between align-items-center">
+        <p class="mb-0 flex-grow-1" data-translate="bannertitle">
+            Diese Website verwendet Cookies, um die notwendigen Funktionen der
+            Website bereitzustellen und Ihr Erlebnis zu verbessern. Durch die
+            Nutzung dieser Website stimmen Sie der Verwendung von Cookies zu.
+        </p>
+        <div>
+            <button id="accept-cookies" class="btn btn-warning me-2">Accept</button>
+            <!-- <button id="accept-cookies" class="btn text-white me-2" style="background-color: #1e1e1e;" >Accept</button> -->
+            <button id="decline-cookies" class="btn btn-secondary">Decline</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg px-5 fixed-top" style="background-color: #1e1e1e !important;">
+        <a class="navbar-brand text-white" href="#">
+            <img src="./images/gm-connect-logo.png" alt="GM Consultant Logo" style="height: 40px;" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html" data-translate="home">Home</a></li>
+                <!-- <li class="nav-item"><a class="nav-link text-white" href="index.html#about" data-translate="about">Über uns</a></li> -->
+                <li class="nav-item"><a class="nav-link text-white"  href="index.html#services" data-translate="services">Dienstleistungen</a></li>
+                <!-- <li class="nav-item"><a class="nav-link text-white"  href="index.html#testimonials" data-translate="testimonials">Testimonials</a></li> -->
+                <li class="nav-item"><a class="nav-link text-white" href="contact.html" data-translate="contact">Kontakt</a></li>
+                <li class="nav-item">
+                    <button id="languageToggle" class="btn btn-outline-light d-flex align-items-center">
+                        <img src="https://flagcdn.com/de.svg" alt="German Flag" style="width: 20px; height: 15px; margin-right: 5px;" id="flagIcon">
+                        <span id="languageText">DE</span>
+                    </button>
+                </li>
+            </ul>
+        </div> 
+    </nav> 
+    <main class="mt-5">
+        <!-- Terms and Conditions Section -->
+        <section id="terms-and-conditions" class="py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <!-- Card Component -->
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body p-4 p-md-5">
+                                <!-- Title -->
+                                <h1 class="card-title text-center fw-bold mb-4 display-5">Allgemeine Geschäftsbedingungen</h1>
+    
+                                <!-- Introduction -->
+                                <p class="lead text-center mb-4">
+                                    Willkommen bei GM Connect UG (haftungsbeschränkt)! Diese Allgemeinen Geschäftsbedingungen regeln die Nutzung der Website von GM Connect UG (haftungsbeschränkt), erreichbar unter 
+                                    <a href="https://gm-connect.de" class="text-decoration-none">https://gm-connect.de</a>.
+                                </p>
+    
+                                <!-- Section: Cookies -->
+                                <div class="mb-4">
+                                    <h2 class="fw-bold mb-3">Cookies</h2>
+                                    <p>
+                                        Diese Website verwendet Cookies, um Ihre Online-Erfahrung zu personalisieren. Durch den Zugriff auf GM Connect UG (haftungsbeschränkt) stimmen Sie der Verwendung der erforderlichen Cookies zu.
+                                    </p>
+                                    <p>
+                                        Ein Cookie ist eine Textdatei, die von einem Webserver auf Ihrer Festplatte abgelegt wird. Cookies können nicht verwendet werden, um Programme auszuführen oder Viren auf Ihren Computer zu übertragen. Sie sind eindeutig Ihnen zugeordnet und können nur von dem Webserver gelesen werden, der den Cookie an Sie ausgegeben hat.
+                                    </p>
+                                    <p>
+                                        Wir können Cookies verwenden, um Informationen für statistische oder Marketingzwecke zu sammeln, zu speichern und nachzuverfolgen, um den Betrieb unserer Website zu gewährleisten. Sie haben die Möglichkeit, optionale Cookies zu akzeptieren oder abzulehnen. Es gibt jedoch bestimmte erforderliche Cookies, die für den Betrieb unserer Website notwendig sind und für die keine Zustimmung erforderlich ist.
+                                    </p>
+                                </div>
+    
+                                <!-- Section: License -->
+                                <div class="mb-4">
+                                    <h2 class="fw-bold mb-3">Lizenz</h2>
+                                    <p>
+                                        Sofern nicht anders angegeben, besitzt GM Connect UG (haftungsbeschränkt) und/oder seine Lizenzgeber die geistigen Eigentumsrechte für sämtliches Material auf GM Connect UG (haftungsbeschränkt). Alle geistigen Eigentumsrechte sind vorbehalten. Sie dürfen auf GM Connect UG (haftungsbeschränkt) für Ihren persönlichen Gebrauch zugreifen, unter den Einschränkungen, die in diesen Allgemeinen Geschäftsbedingungen festgelegt sind.
+                                    </p>
+                                    <p>
+                                        Es ist Ihnen nicht gestattet:
+                                    </p>
+                                    <ul class="list-group list-group-flush mb-3">
+                                        <li class="list-group-item">Inhalte von GM Connect UG (haftungsbeschränkt) zu kopieren oder erneut zu veröffentlichen;</li>
+                                        <li class="list-group-item">Inhalte von GM Connect UG (haftungsbeschränkt) zu verkaufen, zu vermieten oder unterzulizenzieren;</li>
+                                        <li class="list-group-item">Inhalte von GM Connect UG (haftungsbeschränkt) zu reproduzieren, zu duplizieren oder zu kopieren;</li>
+                                        <li class="list-group-item">Inhalte von GM Connect UG (haftungsbeschränkt) zu verbreiten.</li>
+                                    </ul>
+                                </div>
+    
+                                <!-- Section: Hyperlinks -->
+                                <div class="mb-4">
+                                    <h2 class="fw-bold mb-3">Hyperlinks zu unseren Inhalten</h2>
+                                    <p>
+                                        Die folgenden Organisationen dürfen ohne vorherige schriftliche Genehmigung auf unsere Website verlinken:
+                                    </p>
+                                    <ul class="list-group list-group-flush mb-3">
+                                        <li class="list-group-item">Regierungsbehörden;</li>
+                                        <li class="list-group-item">Suchmaschinen;</li>
+                                        <li class="list-group-item">Nachrichtenorganisationen;</li>
+                                        <li class="list-group-item">Online-Verzeichnisverteiler dürfen auf unsere Website verlinken, genau wie sie auf die Websites anderer gelisteter Unternehmen verlinken;</li>
+                                        <li class="list-group-item">Systemweit akkreditierte Unternehmen mit Ausnahme gemeinnütziger Organisationen, Wohltätigkeits-Einkaufszentren und Wohltätigkeits-Spendenorganisationen, die keine Hyperlinks zu unserer Website setzen dürfen.</li>
+                                    </ul>
+                                    <p>
+                                        Diese Organisationen dürfen auf unsere Homepage, auf Veröffentlichungen oder auf andere Website-Informationen verlinken, solange der Link:
+                                    </p>
+                                    <ul class="list-group list-group-flush mb-3">
+                                        <li class="list-group-item">nicht irreführend ist;</li>
+                                        <li class="list-group-item">keine falsche Sponsoring-, Genehmigungs- oder Unterstützungsbeziehung suggeriert;</li>
+                                        <li class="list-group-item">in den Kontext der Website des verlinkenden Unternehmens passt.</li>
+                                    </ul>
+                                </div>
+    
+                                <!-- Section: Haftungsausschluss -->
+                                <div class="mb-4">
+                                    <h2 class="fw-bold mb-3">Haftungsausschluss</h2>
+                                    <p>
+                                        Soweit nach geltendem Recht zulässig, schließen wir alle Zusicherungen, Gewährleistungen und Bedingungen in Bezug auf unsere Website und deren Nutzung aus. Nichts in diesem Haftungsausschluss wird:
+                                    </p>
+                                    <ul class="list-group list-group-flush mb-3">
+                                        <li class="list-group-item">Unsere oder Ihre Haftung für Tod oder Körperverletzung einschränken oder ausschließen;</li>
+                                        <li class="list-group-item">Unsere oder Ihre Haftung für Betrug oder betrügerische Falschdarstellung einschränken oder ausschließen;</li>
+                                        <li class="list-group-item">Unsere oder Ihre Haftung in einer Weise einschränken, die nach geltendem Recht nicht zulässig ist;</li>
+                                        <li class="list-group-item">Eine unserer oder Ihre Haftung ausschließen, die nach geltendem Recht nicht ausgeschlossen werden darf.</li>
+                                    </ul>
+                                    <p>
+                                        Die in diesem Abschnitt und an anderer Stelle in diesem Haftungsausschluss dargelegten Haftungsbeschränkungen und -ausschlüsse:
+                                    </p>
+                                    <ul class="list-group list-group-flush mb-3">
+                                        <li class="list-group-item">unterliegen dem vorhergehenden Absatz;</li>
+                                        <li class="list-group-item">regeln alle Haftungen, die sich aus dem Haftungsausschluss ergeben, einschließlich Haftungen aus Verträgen, aus unerlaubter Handlung und aus der Verletzung gesetzlicher Pflichten.</li>
+                                    </ul>
+                                    <p>
+                                        Solange die Website und die darauf enthaltenen Informationen und Dienste kostenlos zur Verfügung gestellt werden, haften wir nicht für Verluste oder Schäden jeglicher Art.
+                                    </p>
+                                </div>
+    
+                                <!-- Section: Kontakt -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <!-- Footer -->
+    <footer class="py-5" style="background-color: #1e1e1e; color: white">
+        <div class="container px-4">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <img src="./images/gm-connect-logo.png" alt="GM Consultant Logo"
+                        class="img-fluid mb-2" style="height: 50px" />
+                    <p class="text-light" data-translate="footerText">
+                        Ihr vertrauenswürdiger Partner für Bildungs- und
+                        Rekrutierungslösungen in Deutschland.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3 text-white" data-translate="footerServicesTitle">
+                        Dienstleistungen
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="index.html" class="text-decoration-none text-light"
+                                data-translate="footerService1">Ausbildung Beratung</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="text-decoration-none text-light"
+                                data-translate="footerService2">Ausbildung Training</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="text-decoration-none text-light"
+                                data-translate="footerService3">Rekrutierungslösungen</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3 text-white" data-translate="footerCompanyTitle">
+                        Unternehmen
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="index.html" class="text-decoration-none text-light" data-translate="footerCompany1">Über
+                                uns</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="text-decoration-none text-light"
+                                data-translate="footerCompany2">Karriere</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-decoration-none text-light"
+                                data-translate="footerCompany3">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3 text-white" data-translate="footerLegalTitle">
+                        Rechtliches
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="privacy_policy.html" class="text-decoration-none text-light"
+                                data-translate="footerLegal1">Datenschutzrichtlinie</a>
+                        </li>
+                        <li>
+                            <a href="terms_and_condition.html" class="text-decoration-none text-light"
+                                data-translate="footerLegal2">Nutzungsbedingungen</a>
+                        </li>
+                        <li>
+                            <a href="imprint.html" class="text-decoration-none text-light"
+                                data-translate="footerLegal3">Impressum</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top border-light mt-4 pt-3 text-center text-light">
+                <p>&copy; 2025 GM Connect. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Select elements
+            const cookieBanner = document.getElementById("cookie-banner");
+            const acceptBtn = document.getElementById("accept-cookies");
+            const declineBtn = document.getElementById("decline-cookies");
+
+            // Check if user already accepted or declined cookies
+            const cookieConsent = localStorage.getItem("cookieConsent");
+
+            if (cookieConsent === "accepted" || cookieConsent === "declined") {
+                cookieBanner.remove(); // Hide the banner
+
+                return; // Stop further execution
+            }
+
+            // Accept button click event
+            acceptBtn.onclick = function () {
+                localStorage.setItem("cookieConsent", "accepted");
+                cookieBanner.remove(); // Remove from the DOM
+            };
+
+            // Decline button click event
+            declineBtn.onclick = function () {
+                localStorage.setItem("cookieConsent", "declined");
+                cookieBanner.remove();
+            };
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 1000,
+                once: true,
+            });
+
+            const languageData = {
+                de: {
+                    'home': "Home",
+                    services: "Dienstleistungen",
+                    testimonials: "Testimonials",
+                    contact: "Kontakt",
+                    footerText: "Ihr vertrauenswürdiger Partner für Bildungs- und Rekrutierungslösungen in Deutschland.",
+                    footerServicesTitle: "Dienstleistungen",
+                    footerService1: "Ausbildung Beratung",
+                    footerService2: "Ausbildung Training",
+                    footerService3: "Rekrutierungslösungen",
+                    footerCompanyTitle: "Unternehmen",
+                    footerCompany1: "Über uns",
+                    footerCompany2: "Karriere",
+                    footerCompany3: "Kontakt",
+                    footerLegalTitle: "Rechtliches",
+                    footerLegal1: "Datenschutzrichtlinie",
+                    footerLegal2: "Nutzungsbedingungen",
+                    footerLegal3: "Impressum",
+                    bannertitle: "Diese Website verwendet Cookies, um die notwendigen Funktionen der Website bereitzustellen und Ihr Erlebnis zu verbessern. Durch die Nutzung dieser Website stimmen Sie der Verwendung von Cookies zu.",
+                    impressumTitle: "Impressum",
+                    companyName: "GM Connect UG",
+                    companyDescription: "Personalvermittlung",
+                    companyAddress: "Ettishofer Straße 7, 88250 Weingarten, Deutschland",
+                    companyEmail: "info@gm-connect.de",
+                    companyPhone: "01522 4277600",
+                    legalTitle: "Verbraucherstreitbeilegung / Universalschlichtungsstelle",
+                    legalText: "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+                },
+                en: {
+                    home: "Home",
+                    services: "Services",
+                    testimonials: "Testimonials",
+                    contact: "Contact",
+                    footerText: "Your trusted partner for education and recruitment solutions in Germany.",
+                    footerServicesTitle: "Services",
+                    footerService1: "Training Consultation",
+                    footerService2: "Training Programs",
+                    footerService3: "Recruitment Solutions",
+                    footerCompanyTitle: "Company",
+                    footerCompany1: "About Us",
+                    footerCompany2: "Careers",
+                    footerCompany3: "Contact",
+                    footerLegalTitle: "Legal",
+                    footerLegal1: "Privacy Policy",
+                    footerLegal2: "Terms of Use",
+                    footerLegal3: "Imprint",
+                    bannertitle: "This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to the use of cookies.",
+                    impressumTitle: "Imprint",
+                    companyName: "GM Connect UG",
+                    companyDescription: "Personnel Placement",
+                    companyAddress: "Ettishofer Street 7, 88250 Weingarten, Germany",
+                    companyEmail: "info@gm-connect.de",
+                    companyPhone: "01522 4277600",
+                    legalTitle: "Consumer Dispute Resolution / Universal Arbitration Board",
+                    legalText: "We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board."
+                }
+            };
+
+            let currentLanguage = "de";
+
+            const flagIcon = document.getElementById("flagIcon");
+            const languageText = document.getElementById("languageText");
+
+            function toggleLanguage() {
+                currentLanguage = currentLanguage === "de" ? "en" : "de";
+                updateLanguage();
+
+                if (currentLanguage === "de") {
+                    flagIcon.src = "https://flagcdn.com/de.svg";
+                    languageText.textContent = "DE";
+                } else {
+                    flagIcon.src = "https://flagcdn.com/gb.svg";
+                    languageText.textContent = "EN";
+                }
+            }
+
+            function updateLanguage() {
+                document.querySelectorAll("[data-translate]").forEach((element) => {
+                    const key = element.getAttribute("data-translate");
+                    element.textContent = languageData[currentLanguage][key];
+                });
+            }
+
+            document
+                .getElementById("languageToggle")
+                .addEventListener("click", toggleLanguage);
+
+            if (currentLanguage === "de") {
+                flagIcon.src = "https://flagcdn.com/de.svg";
+                languageText.textContent = "DE";
+            } else {
+                flagIcon.src = "https://flagcdn.com/gb.svg";
+                languageText.textContent = "EN";
+            }
+
+            updateLanguage();
+        });
+    </script>
+</body>
+
+</html>
